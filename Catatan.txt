@@ -1,7 +1,9 @@
 Belajar OPEN API PZN
 
 dimulai 10-5-2022
-telah sampai video
+telah sampai video menit 26
 dimulai 10-5-2022
 
 * Note
+- mengunakan https://editor.swagger.io/ jika ingin
+terlihat interaktif
