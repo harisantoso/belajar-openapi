@@ -112,7 +112,7 @@
         }
       }
     },
-    "/todolist/{todolistId": {
+    "/todolist/{todolistId}": {
 
 
       "put": {
