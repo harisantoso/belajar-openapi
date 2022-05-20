@@ -2,7 +2,7 @@
   "openapi": "3.0.3",
   "info": {
     "title": "Todolist RESTful API",
-    "vesion": "1",
+    "version": "1",
     "description": "OpenAPI for Todolist RESTful API",
     "termsOfService": "https://www.hrsantoso.com",
     "contact": {
@@ -15,6 +15,9 @@
     "url": "https://www.apache.org/licenses/LICENSE-2.0"
     }
   },
+
+
+
   "servers": [
     {
       "description":"Todolist Restful API",

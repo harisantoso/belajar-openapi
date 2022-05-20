@@ -1,9 +1,8 @@
 {
   "openapi": "3.0.3",
-  
   "info": {
     "title": "Todolist RESTful API",
-    "vesion": "1",
+    "version": "1",
     "description": "OpenAPI for Todolist RESTful API",
     "termsOfService": "https://www.hrsantoso.com",
     "contact": {
@@ -16,6 +15,8 @@
     "url": "https://www.apache.org/licenses/LICENSE-2.0"
     }
   },
+
+
 
   "servers": [
     {
@@ -35,18 +36,21 @@
     }
   ],
 
+
+  
   "externalDocs": {
     "description": "Youtube Virtual Box",
     "url": "https://www.youtube.com/c/VirtualBox" 
   },
   
+
+
   "paths":{
     "/todolist": {
 
-      
+
       "get": {
-        // tag
-        "tags":["Todolist", "Santoso"],
+        "tags": ["Todolist", "Santoso"],
         "summary": "Get All Todolist",
         "description": "Get all active todolist by default",
         "parameters": [
@@ -55,7 +59,6 @@
             "in": "query",
             "required": false,
             "description": "Is include done todolist",
-
             "schema": {
               "type": "boolean",
               "nullable": true,
@@ -67,30 +70,26 @@
             "in": "query",
             "required": false,
             "description": "Filter todolist by name",
-
             "schema": {
               "type": "string",
               "nullable": true,
               "minLength": 1,
               "maxLength": 100
             },
-
             "examples": {
               "Javascript": {
-                "description": "Example name JS",
+                "description": "Example name Javascript",
                 "value": "Javascript"
               },
-              "php": {
+              "PHP": {
                 "description": "Example name PHP",
                 "value": "PHP"
               }
             }
-            
           }
         ],
         "responses": {
-          // response body
-          "200": {
+          "200" : {
             "description": "Success get all todolist",
             "content": {
               "application/json": {
@@ -151,10 +150,9 @@
 
 
       "post": {
-        // tag
-        "tags":["Todolist"],
+        "tags": ["Todolist", "Santoso"],
         "summary": "Create New Todolist",
-        "description": "Create New active database",
+        "description": "Create new todolist to database",
         "requestBody": {
           "required": true,
           "content": {
@@ -167,7 +165,7 @@
                     "minLength": 1,
                     "required": true
                   },
-                  "priority": {
+                  "priority" : {
                     "type": "integer",
                     "format": "int32",
                     "required": true,
@@ -176,7 +174,7 @@
                   "tags": {
                     "type": "array",
                     "required": false,
-                    "minItems": 1,
+                    "minLength": 1,
                     "items": {
                       "type": "string",
                       "minLength": 1
@@ -185,8 +183,8 @@
                 }
               },
               "examples": {
-                "Javascript": {
-                  "description": "Example create todolist JS",
+                "javascript": {
+                  "description": "Example create todolist Javascript",
                   "value": {
                     "name": "Javascript",
                     "priority": 3,
@@ -215,7 +213,7 @@
           "200": {
             "description": "Success create todolist",
             "content": {
-              "application/json": {
+              "applications/json": {
                 "schema": {
                   "type": "object",
                   "properties": {
@@ -239,7 +237,7 @@
                 },
                 "examples": {
                   "javascript": {
-                    "description": "Success create javascript todolist",
+                    "description": "Success create Javascript todolist",
                     "value": {
                       "id": "1",
                       "name": "Javascript",
@@ -273,8 +271,7 @@
 
 
       "put": {
-        // tag
-        "tags":["Todolist"],
+        "tags": ["Todolist", "Santoso"],
         "summary": "Updata existing todolist",
         "description": "Update existing todolist in database",
         "parameters": [
@@ -282,20 +279,19 @@
             "name": "todolistId",
             "in": "path",
             "required": true,
-            "description": "todolist id for updated",
-
+            "description": "Todolist id for updated",
             "schema": {
               "type": "string",
               "minLength": 1,
               "maxLength": 100
             },
             "examples": {
-              "Javascript": {
-                "description": "sample todolist id for Javascript",
+              "javascript": {
+                "description": "Sample todolist id for Javascript",
                 "value": "1"
               },
               "php": {
-                "description": "sample todolist id for PHP",
+                "description": "Sample todolist id for PHP",
                 "value": "2"
               }
             }
@@ -322,7 +318,7 @@
                   "tags": {
                     "type": "array",
                     "required": false,
-                    "minItems": 1,
+                    "minLength": 1,
                     "items": {
                       "type": "string",
                       "minLength": 1
@@ -331,8 +327,8 @@
                 }
               },
               "examples": {
-                "Javascript": {
-                  "description": "Example create todolist JS",
+                "javascript": {
+                  "description": "Example create todolist Javascript",
                   "value": {
                     "name": "Javascript",
                     "priority": 3,
@@ -361,7 +357,7 @@
           "200": {
             "description": "Success update todolist",
             "content": {
-              "application/json": {
+              "applications/json": {
                 "schema": {
                   "type": "object",
                   "properties": {
@@ -385,7 +381,7 @@
                 },
                 "examples": {
                   "javascript": {
-                    "description": "Success create javascript todolist",
+                    "description": "Success create Javascript todolist",
                     "value": {
                       "id": "1",
                       "name": "Javascript",
@@ -417,9 +413,8 @@
       
 
       "delete": {
-        // tag
-        "tags":["Todolist"],
-        "summary": "Delete existing todolistt",
+        "tags": ["Todolist", "Santoso"],
+        "summary": "Delete existing todolist",
         "description": "Delete existing todolist in database",
         "parameters": [
           {
@@ -428,7 +423,7 @@
             "required": true,
             "description": "todolist id for deleted",
             "schema": {
-              "type": "boolean",
+              "type": "string",
               "minLength": 1,
               "maxLength": 100
             }

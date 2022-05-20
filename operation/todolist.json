@@ -1,9 +1,8 @@
 {
   "openapi": "3.0.3",
-  
   "info": {
     "title": "Todolist RESTful API",
-    "vesion": "1",
+    "version": "1",
     "description": "OpenAPI for Todolist RESTful API",
     "termsOfService": "https://www.hrsantoso.com",
     "contact": {
@@ -16,6 +15,8 @@
     "url": "https://www.apache.org/licenses/LICENSE-2.0"
     }
   },
+
+
 
   "servers": [
     {
@@ -35,41 +36,41 @@
     }
   ],
 
+
+
   "externalDocs": {
     "description": "Youtube Virtual Box",
     "url": "https://www.youtube.com/c/VirtualBox" 
   },
   
+
+
   "paths":{
     "/todolist": {
       "get": {
         "summary": "Get All Todolist",
         "description": "Get all active todolist by default",
         "responses": {
-          
         }
       },
       "post": {
-        "summary": "Create New Todolist",
-        "description": "Create New active database",
+        "summary": "Create new todolist",
+        "description": "Create new todolis to database",
         "responses": {
-
         }
       }
     },
-    "/todolist/{todolistId": {
+    "/todolist/{todolistId}": {
       "put": {
         "summary": "Updata existing todolist",
         "description": "Update existing todolist in database",
         "responses": {
-
         }
       },
       "delete": {
         "summary": "Delete existing todolistt",
         "description": "Delete existing todolist in database",
         "responses": {
-
         }
       }
     }

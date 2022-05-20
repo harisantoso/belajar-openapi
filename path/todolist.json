@@ -1,9 +1,8 @@
 {
   "openapi": "3.0.3",
-  
   "info": {
     "title": "Todolist RESTful API",
-    "vesion": "1",
+    "version": "1",
     "description": "OpenAPI for Todolist RESTful API",
     "termsOfService": "https://www.hrsantoso.com",
     "contact": {
@@ -16,6 +15,8 @@
     "url": "https://www.apache.org/licenses/LICENSE-2.0"
     }
   },
+
+
 
   "servers": [
     {
@@ -35,11 +36,15 @@
     }
   ],
 
+
+
   "externalDocs": {
     "description": "Youtube Virtual Box",
     "url": "https://www.youtube.com/c/VirtualBox" 
   },
   
+
+
   "paths":{
     "/todolist": {
       "get": {
@@ -49,7 +54,7 @@
 
       }
     },
-    "/todolist/{todolistId": {
+    "/todolist/{todolistId}": {
       "put": {
 
       },

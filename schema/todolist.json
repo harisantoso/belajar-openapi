@@ -1,9 +1,8 @@
 {
   "openapi": "3.0.3",
-  
   "info": {
     "title": "Todolist RESTful API",
-    "vesion": "1",
+    "version": "1",
     "description": "OpenAPI for Todolist RESTful API",
     "termsOfService": "https://www.hrsantoso.com",
     "contact": {
@@ -16,6 +15,8 @@
     "url": "https://www.apache.org/licenses/LICENSE-2.0"
     }
   },
+
+
 
   "servers": [
     {
@@ -35,15 +36,19 @@
     }
   ],
 
+
+  
   "externalDocs": {
     "description": "Youtube Virtual Box",
     "url": "https://www.youtube.com/c/VirtualBox" 
   },
   
+
+
   "paths":{
     "/todolist": {
 
-      
+
       "get": {
         "summary": "Get All Todolist",
         "description": "Get all active todolist by default",
@@ -53,7 +58,6 @@
             "in": "query",
             "required": false,
             "description": "Is include done todolist",
-
             "schema": {
               "type": "boolean"
             }
@@ -63,21 +67,19 @@
             "in": "query",
             "required": false,
             "description": "Filter todolist by name",
-
             "schema": {
               "type": "string"
             }
           }
         ],
         "responses": {
-          
         }
       },
 
 
       "post": {
         "summary": "Create New Todolist",
-        "description": "Create New active database",
+        "description": "Create new todolist to database",
         "responses": {
         }
       }
@@ -93,7 +95,7 @@
             "name": "todolistId",
             "in": "path",
             "required": true,
-            "description": "todolist id for updated",
+            "description": "Todolist id for updated",
             "schema": {
               "type": "string"
             }
@@ -105,7 +107,7 @@
       
 
       "delete": {
-        "summary": "Delete existing todolistt",
+        "summary": "Delete existing todolist",
         "description": "Delete existing todolist in database",
         "parameters": [
           {
@@ -114,7 +116,7 @@
             "required": true,
             "description": "todolist id for deleted",
             "schema": {
-              "type": "boolean"
+              "type": "string"
             }
           }
         ],

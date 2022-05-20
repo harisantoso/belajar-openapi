@@ -50,6 +50,7 @@
 
 
       "get": {
+        "tags": ["Todolist", "Santoso"],
         "summary": "Get All Todolist",
         "description": "Get all active todolist by default",
         "parameters": [
@@ -149,6 +150,7 @@
 
 
       "post": {
+        "tags": ["Todolist", "Santoso"],
         "summary": "Create New Todolist",
         "description": "Create new todolist to database",
         "requestBody": {
@@ -269,6 +271,7 @@
 
 
       "put": {
+        "tags": ["Todolist", "Santoso"],
         "summary": "Updata existing todolist",
         "description": "Update existing todolist in database",
         "parameters": [
@@ -410,6 +413,7 @@
       
 
       "delete": {
+        "tags": ["Todolist", "Santoso"],
         "summary": "Delete existing todolist",
         "description": "Delete existing todolist in database",
         "parameters": [
@@ -473,6 +477,100 @@
             }
           }
         }
+      }
+    }
+  },
+
+
+
+  "components": {
+    "parameters": {
+      "TodolistId":{
+        "name": "todolistId",
+        "in": "path",
+        "required": true,
+        "description": "Todolist id for updated",
+        "schema": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "examples": {
+          "javascript": {
+            "description": "Sample todolist id for Javascript",
+            "value": "1"
+          },
+          "php": {
+            "description": "Sample todolist id for PHP",
+            "value": "2"
+          }
+        }
+      }
+    },
+    "schemas": {
+      "Todolist": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "number",
+            "format": "int32"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "CreateOrUpdateTodolist": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "number",
+            "format": "int32"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "ArrayTodolist": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "priority": {
+              "type": "number",
+              "format": "int32"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+        
       }
     }
   }
